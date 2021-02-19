@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCSSI</title>
-    <script src="jquery.min.js"></script>
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -18,22 +17,9 @@
     <div class="header" >
       <img src="banner2.png" alt="" width="100%" style="display: block;">
     </div>
-   <div id="navbar">
-    <!-- Dropdown Structure -->
-    <ul id="directions" class="dropdown-content  blue accent-3-text">
-     <li><a href="#!">La DSI</a></li>
-     <li><a href="#!">la DIE</a></li>
-     <li><a href="#!">La DAAR</a></li>
-     <li class="divider"></li>
-     <li><a href="#!">Le CNOC</a></li>
-   </ul>
-<ul id="formations" class="dropdown-content  blue accent-3-text">
-   <li><a href="#!">one</a></li>
-   <li><a href="#!">two</a></li>
-   <li class="divider"></li>
-   <li><a href="#!">three</a></li>
- </ul>
- <nav style="min-height: 80px">
+  
+  
+ <nav id="navbar"  style="min-height: 80px">
    <div class="nav-wrapper  blue darken-3">
      <a href="#!" class="brand-logo" style="padding:0!important;"><img src="logo.png" alt="" style=" height: 80px;"></a>
      <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
@@ -47,28 +33,44 @@
        <li><a href="sass.html">Alerte</a></li>
      </ul>
    </div>
- </nav>
-    <!-- SidBar Mobile Menu -->
-  <ul id="slide-out"   class="sidenav blue accent-3-text" >
-   <li><a href="#!" class="sidenav-close">First Sidebar Link</a></li>
-   <li><a href="#!">Second Sidebar Link</a></li>
-   <li class="no-padding">
-     <ul class="collapsible collapsible-accordion">
-       <li>
-         <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
-         <div class="collapsible-body blue accent-4">
-           <ul>
-             <li><a href="#!">First</a></li>
-             <li><a href="#!">Second</a></li>
-             <li><a href="#!">Third</a></li>
-             <li><a href="#!">Fourth</a></li>
-           </ul>
-         </div>
+      <!-- Dropdown Structure -->
+      <ul id="directions" class="dropdown-content  blue accent-3-text">
+        <li><a href="#!">La DSI</a></li>
+        <li><a href="#!">la DIE</a></li>
+        <li><a href="#!">La DAAR</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Le CNOC</a></li>
+      </ul>
+    <ul id="formations" class="dropdown-content  blue accent-3-text">
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">three</a></li>
+    </ul>
+        <!-- SidBar Mobile Menu -->
+      <ul id="slide-out"   class="sidenav blue accent-3-text" >
+       <li><a href="#!" class="sidenav-close">First Sidebar Link</a></li>
+       <li><a href="#!">Second Sidebar Link</a></li>
+       <li class="no-padding">
+         <ul class="collapsible collapsible-accordion">
+           <li>
+             <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+             <div class="collapsible-body blue accent-4">
+               <ul>
+                 <li><a href="#!">First</a></li>
+                 <li><a href="#!">Second</a></li>
+                 <li><a href="#!">Third</a></li>
+                 <li><a href="#!">Fourth</a></li>
+               </ul>
+             </div>
+           </li>
+         </ul>
        </li>
      </ul>
-   </li>
- </ul>
-</div> <!-- navbar end-->
+
+ </nav>
+
+ <!-- navbar end-->
   
   </header>
      <main class="content">
@@ -79,7 +81,7 @@
     <p>Lorem ipsum dolor, sderit quo soluta dolor necessitatibus tempore perferendis ea deleniti quam nam voluptates officia quidem quis voluptatum repellendus tempora, impedit eligendi debitis maiores non cumque voluptatibus! Nam, earum inventore?
     Aspernatur, dignissimos fugiat, illo harum similique voluptatibus nam explicabo deserunt eaque sunt nostrum voluptas necessitatibus nisi impedit magnam esse praesentium reiciendis, omnis sequi consequuntur qui ex rem eos quibusdam. Iste.</p>  
        </section>
-       <article>
+       <article  style="z-index: -1 !important; position: relative">
 <h3>A la Une: ____________</h3>
 <p>Evénements en cryptologie avec the International Association for Cryptologic Research (IACR)</p>
 <h4>2021</h4>
@@ -157,8 +159,6 @@
   </div>
 </div>
   
-
-
   </article>  
   
   
