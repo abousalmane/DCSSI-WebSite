@@ -31,58 +31,72 @@
      <ul class="right hide-on-med-and-down">
        <li class="active"><a href="#!">Accueil</a></li>
        <!-- Dropdown Trigger -->
-       <li><a class="dropdown-trigger" href="#!" data-target="directions">La DIRECTION GENERALE<i class="material-icons right">arrow_drop_down</i></a></li>
+       <li><a class="dropdown-trigger" href="#!" data-target="directions">LA DIRECTION GENERALE<i class="material-icons right">arrow_drop_down</i></a>
+                      <!-- Directions Dropdown Structure -->
+            <ul id="directions" class="dropdown-content  blue accent-3-text">
+              <li><a href="#!">LE DIRECTEUR GENERAL</a></li>
+              <li><a href="#!">MISSION</a></li>
+              <li><a href="#!">ORGANISATION</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">lES DIRECTIONS</a></li>
+              <li><a href="#!">NOS PARTENAIRES</a></li>
+              <li class="divider"></li>
+            </ul>
+      </li>
        <li><a href="#!">CYBERSECURITE</a></li>
        <!-- Dropdown Trigger -->
-       <li><a class="dropdown-trigger" href="#!" data-target="formations">Formations<i class="material-icons right">arrow_drop_down</i></a></li>
-       <li><a href="sass.html">Alerte</a></li>
+       <li><a class="dropdown-trigger" href="#!" data-target="formations">FORMATIONS<i class="material-icons right">arrow_drop_down</i></a>
+                          <!-- Formations Dropdown Structure -->
+            <ul id="formations" class="dropdown-content  blue accent-3-text">
+              <li><a href="#!">SEMINAIRE</a></li>
+              <li><a href="#!">STAGE</a></li>
+              <li><a href="#!">RECRUTEMENT</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">SE CONNECTER</a></li>
+          
+            </ul>
+      
+      </li>
+       <li><a href="#!">AlERTE</a></li>
+       <li><ul id="nav-mobile" >
+           <li>
+             <form style="height:64px;">
+               <div class="input-field ">
+                <input id="search" type="search" class="blue darken-2" required placeholder="Rechercher">
+                <label class="label-icon" for="search"><i class="this material-icons">search</i></label>
+               </div>
+          </form>
+          
+        </li>   
+      </ul>
+      </li>
+      <li><a href="#sheet1"><i class="material-icons">more_vert</i></a></li>
      </ul>
    </div>
-      <!-- Dropdown Structure -->
-      <ul id="directions" class="dropdown-content  blue accent-3-text">
-        <li><a href="#!">Le DIRECTEUR GENERAL</a></li>
-        <li><a href="#!">MISSION</a></li>
-        <li><a href="#!">ORGANISATION</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">lES DIRECTIONS</a></li>
-        <li><a href="#!">NOS PARTENAIRES</a></li>
-        <li class="divider"></li>
-      </ul>
-    <ul id="formations" class="dropdown-content  blue accent-3-text">
-      <li><a href="#!">SEMINAIRE</a></li>
-      <li><a href="#!">STAGE</a></li>
-      <li><a href="#!">RECRUTEMENT</a></li>
-      <li class="divider"></li>
-      <li><a href="#!">SE CONNECTER</a></li>
-    </ul>
+
         <!-- SidBar Mobile Menu -->
       <ul id="slide-out"   class="sidenav blue accent-3-text" >
-        <li><a href="#!">LA CYBERSECURITE</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="directionsMobileNav">LA DIRECTION GENERALE<i class="material-icons right">arrow_drop_down</i></a></li>
         <li><a href="#!">LES GRANDS PROJETS</a></li>
         <li><a href="#!">LES PUBLICATIONS</a></li>
-        <li><a href="#!">FORMATIONS</a></li>
-       <li class="no-padding">
-         <ul class="collapsible collapsible-accordion">
-           <li>
-             <a class="collapsible-header">LA DIRECTION GENERALE<i class="material-icons">arrow_drop_down</i></a>
-             <div class="collapsible-body blue accent-4">
-               <ul>
-                    <li><a href="#!">MISSION</a></li>
-                <li><a href="#!">ORGANISATION</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">lES DIRECTIONS</a></li>
-                <li><a href="#!">NOS PARTENAIRES</a></li>
-               </ul>
-             </div>
-           </li>
-         </ul>
-       </li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion"  data-collapsible = "accordion">
+            <li>
+              <a class="collapsible-header">FORMATIONS<i class="material-icons">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#!">First</a></li>
+                  <li><a href="#!">Second</a></li>
+                  <li><a href="#!">Third</a></li>
+                  <li><a href="#!">Fourth</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
      </ul>
 
- </nav>
-
- <!-- navbar end-->
-  
+ </nav> <!-- End Nav-->
   </header>
      <main class="content">
        <section class="section">
@@ -202,25 +216,28 @@
       
       <script>
       
-      window.onscroll = function() {sticker()};
-      
-      var navbar = document.getElementById("navbar");
-      var sticky = navbar.offsetTop;
-      
-      function sticker() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky")
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
+
+
+window.addEventListener('scroll', function() {
+  let scrollTopY = window.pageYOffset || document.body.scrollTop;
+  let navigation = document.querySelector('nav');
+    if(scrollTopY > 220) {
+      document.body.style.paddingTop = navigation.offsetHeight + 'px';//Eliminate Jump effect  whennavbar is fixed
+          navigation.classList.add('sticky');
+     
+    } else {
+         navigation.classList.remove('sticky');
+         document.body.style.paddingTop = 0;
+    }
+});
+
       document.addEventListener('DOMContentLoaded', function() {
     var sidenavs = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(sidenavs, {edge:'right'});
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems, {alignment:'centre'});
+    var dropdownItems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(dropdownItems, {alignment:'left'});
     var collapsibleItems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(collapsibleItems, {accordion: false});
+    var instances = M.Collapsible.init(collapsibleItems, {accordion: true});
   });
       </script>
       
