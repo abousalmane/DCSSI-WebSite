@@ -29,9 +29,9 @@
      <a href="#!" class="brand-logo" style="padding:0!important;"><img src="logo.png" alt="" style=" height: 80px;"></a>
      <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
      <ul class="right hide-on-med-and-down">
-       <li class="active"><a href="#!">Accueil</a></li>
+       <li class="active"><a href="#!"><i class="material-icons left">home</i> LA DCSSI</a></li>
        <!-- Dropdown Trigger -->
-       <li><a class="dropdown-trigger" href="#!" data-target="directions">LA DIRECTION GENERALE<i class="material-icons right">arrow_drop_down</i></a>
+       <li><a class="dropdown-trigger" href="#!" data-target="directions">LES DIRECTIONS<i class="material-icons right">arrow_drop_down</i></a>
                       <!-- Directions Dropdown Structure -->
             <ul id="directions" class="dropdown-content  blue accent-3-text">
               <li><a href="#!">LE DIRECTEUR GENERAL</a></li>
@@ -57,7 +57,7 @@
             </ul>
       
       </li>
-       <li><a href="#!">AlERTE</a></li>
+       <li><a href="#!">ALERTE</a></li>
        <li><ul id="nav-mobile" >
            <li>
              <form style="height:64px;">
@@ -76,7 +76,21 @@
 
         <!-- SidBar Mobile Menu -->
       <ul id="slide-out"   class="sidenav blue accent-3-text" >
-        <li><a class="dropdown-trigger" href="#!" data-target="directionsMobileNav">LA DIRECTION GENERALE<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li>
+          <ul class="collapsible collapsible-accordion"  data-collapsible = "accordion">
+            <li>
+              <a class="collapsible-header">LA DCSSI<i class="material-icons">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#!">MISSION</a></li>
+                  <li><a href="#!">ORGANISATION</a></li>
+                  <li><a href="#!">LES DIRECTIONS</a></li>
+                  <li><a href="#!">RESSOURCES</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
         <li><a href="#!">LES GRANDS PROJETS</a></li>
         <li><a href="#!">LES PUBLICATIONS</a></li>
         <li class="no-padding">
@@ -99,13 +113,34 @@
  </nav> <!-- End Nav-->
   </header>
      <main class="content">
-       <section class="section">
-        <h3>Presentation de la DCSSI</h3>
-    <p>Depuis 1962, le Sénégal dispose d’un Service Technique Central des Chiffres. Créé par décret n° 62 020, il était  mis à la disposition du Président du Conseil et seul habilité à connaître de tous les problèmes d’ordre technique concernant l’utilisation du Chiffre par le Gouvernement pour l’échange de ses communications intérieures et extérieures .</p> 
-      <p>La mission du Service  technique central des Chiffres a été redéfinie par le décret n°83-187 du 18 février 1983 qui en a fait un « Service technique central des Chiffres et de la Sécurité des Télécommunications »  pour lui permettre de prendre en charge des études ayant pour but de dégager des méthodes et des moyens propres à développer, renforcer et perfectionner les techniques concourant à la sécurité des télécommunications nationales.</p>
-   <p>Sa mission et son organisation seront ainsi renforcées par le decret n° 2007-909 en date du 31 juillet 2007 portant organsation de la Présidence de la République. Il est directement rattaché à la Présidence de la République en tant que Service à compétence nationale.</p>
-   <p> En tant qu’organe principal de la sécurité des communications, le STCC-SSI a pour mission principale d’ assurer en toute circonstance, la protection des informations de caractère secret empruntant les voies de transmission indiscrètes.</p>
-  </section>
+<div id="level1">
+  <section class="section">
+    <div class="row">
+      <div class="col s12 ">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="#presentation">Présentation</a></li>
+          <li class="tab col s3"><a  href="#mission">Mission</a></li>
+          <li class="tab col s3"><a href="#organisation">Organisation</a></li>
+        </ul>
+      </div>
+        <div id="presentation" class="col s12">
+          <h3>Presentation de la DCSSI</h3>
+          <p>Depuis 1962, le Sénégal dispose d’un Service Technique Central des Chiffres. Créé par décret n° 62 020, il était  mis à la disposition du Président du Conseil et seul habilité à connaître de tous les problèmes d’ordre technique concernant l’utilisation du Chiffre par le Gouvernement pour l’échange de ses communications intérieures et extérieures .</p> 
+            <p>La mission du Service  technique central des Chiffres a été redéfinie par le décret n°83-187 du 18 février 1983 qui en a fait un « Service technique central des Chiffres et de la Sécurité des Télécommunications »  pour lui permettre de prendre en charge des études ayant pour but de dégager des méthodes et des moyens propres à développer, renforcer et perfectionner les techniques concourant à la sécurité des télécommunications nationales.</p>
+          <p>Sa mission et son organisation seront ainsi renforcées par le decret n° 2007-909 en date du 31 juillet 2007 portant organsation de la Présidence de la République. Il est directement rattaché à la Présidence de la République en tant que Service à compétence nationale.</p>
+          <p> En tant qu’organe principal de la sécurité des communications, le STCC-SSI a pour mission principale d’ assurer en toute circonstance, la protection des informations de caractère secret empruntant les voies de transmission indiscrètes.</p>          
+        </div>
+        <div id="mission" class="col s12">Test 2 <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam aspernatur ipsam dolorum nam explicabo. Ab reprehenderit, repellendus eos veniam, commodi aliquam laborum ducimus iure voluptatum cum dignissimos suscipit libero neque.
+        Unde distinctio rationetis placeat accusantium ea ullam reiciendis molestiae, laudantium enim sed autem. Quae natus rem expedita dolores repellat nisi. Labore optio eveniet nesciunt exercitationem quidem ad eum explicabo.</p>
+      </div>
+        <div id="organisation" class="col s12">Test 3 <p>Lorem ips Possimus magnam, quos voluptas placeat quam fugit ipsam optio quidem deserunt consequatur dolorem, assumenda mollitia recusandae sed repellendus vero est atque impedit.</p></div>
+       </div>
+          
+</section>
+<aside>
+  <p>Aside content</p>
+</aside>
+</div>
 <article  style="z-index: -1 !important; position: relative">
 <h3>A la Une: ____________</h3>
 <p>Evénements en cryptologie avec the International Association for Cryptologic Research (IACR)</p>
@@ -191,12 +226,17 @@
   <footer class="page-footer blue darken-4">
     <div class="container ">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        <div class="col l6 s12" style="border-right: 2px solid #1687d7;">
+          <h5 class="white-text">LA DCSSI</h5>
+          <ul >
+            <li><a href="#"  class="grey-text text-lighten-4">Missions</a> </li>
+            <li><a href="#"  class="grey-text text-lighten-4">Les Directions</a></li>
+            <li><a href="#"  class="grey-text text-lighten-4">Alertes</a></li>
+            <li><a href="#"  class="grey-text text-lighten-4">Contact</a></li>
+          </ul>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
+          <h5 class="white-text">Liens utils</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
@@ -208,8 +248,8 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2020 Copyright AbouSalmane@DCSSI
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    <p class="left">  © Copyright 2020 AbouSalmane@DCSSI </p>
+      <a class="grey-text text-lighten-4 " href="#!"><img src="logo.png" width="100px" alt="" style="display: block; margin: auto;"></a>
       </div>
     </div>
   </footer>
@@ -233,11 +273,13 @@ window.addEventListener('scroll', function() {
 
       document.addEventListener('DOMContentLoaded', function() {
     var sidenavs = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(sidenavs, {edge:'right'});
+    var mobileNav = M.Sidenav.init(sidenavs, {edge:'right'});
     var dropdownItems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(dropdownItems, {alignment:'left'});
+    var dropdownInstance = M.Dropdown.init(dropdownItems, {alignment:'left'});
     var collapsibleItems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(collapsibleItems, {accordion: true});
+    var collapser = M.Collapsible.init(collapsibleItems, {accordion: true});
+    var tabs = document.querySelector('.tabs');
+    var tabInstance = M.Tabs.init(tabs); 
   });
       </script>
       
