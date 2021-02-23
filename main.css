@@ -12,24 +12,17 @@ body {
 
 #navbar {
   overflow: visible;
-  background-color:rgba(2,139,255,1);
   z-index: 2;
 }
 
 
-#navbar a {
+#navbar a, #slide-out a{
   display: block;
-  color: #FFF;
-  text-align: center;
-  /* font-size: 17px; */
-  text-transform: uppercase;
+/*   color: #FFF;
+ */  /* font-size: 17px; */
+ text-transform: uppercase;
 }
 
-/*
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-} */
 
 
 .content {
@@ -54,7 +47,7 @@ nav .input-field input[type=search]:focus {
 #level1 ul li a, h3 {
 color:#00796b ;
 }
-#level1 ul li a.active {
+#level1 ul li a.active,#level1 ul li a:hover  {
   background-color: #b2dfdb; /*teal lighten-4*/
   }
   #level1 ul li.indicator{
