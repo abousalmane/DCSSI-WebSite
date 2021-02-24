@@ -340,15 +340,15 @@ window.addEventListener('scroll', function() {
             fadeInLogo.classList.add('fadeIn');
             document.getElementById('navbar').style.minHeight= '80px';
             document.querySelectorAll('#navbar ul li').forEach(liEl => liEl.classList.add('adaptHeight'));      
-            document.querySelectorAll('#navbar ul li a').forEach(liEl => liEl.classList.add('adaptHeight'));
+    /*         document.querySelectorAll('#navbar ul li a').forEach(liEl => liEl.classList.add('adaptHeight')); */
     } else {
          navigation.classList.remove('sticky');
          document.body.style.paddingTop = 0;
             // Fade out logo & remove FAB
             fadeInLogo.classList.remove('fadeIn');
             document.getElementById('navbar').style.minHeight= '64px'; //style.minHeight= '64px';
-            document.querySelectorAll('#navbar ul li:first-child').forEach(liEl => liEl.classList.remove('adaptHeight'));      
-            document.querySelectorAll('#navbar ul li a:first-child').forEach(liEl => liEl.classList.remove('adaptHeight'));
+            document.querySelectorAll('#navbar ul li').forEach(liEl => liEl.classList.remove('adaptHeight'));      
+      /*       document.querySelectorAll('#navbar ul li a:first-child').forEach(liEl => liEl.classList.remove('adaptHeight')); */
     }
  
   
