@@ -25,10 +25,10 @@
   
   
  <nav id="navbar" >
-   <div class="nav-wrapper  blue darken-3">
+   <div class="nav-wrapper blue darken-3">
      <a href="#!" class="brand-logo  animated slideInUp" style="padding:0!important;"><img src="logo.png" class="fadeOut" alt="" ></a>
      <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
-     <ul class="right hide-on-med-and-down">
+     <ul class="hide-on-med-and-down container ">
        <li class="active"><a href="#!"><i class="material-icons left">home</i> LA DCSSI</a></li>
        <!-- Dropdown Trigger -->
        <li><a class="dropdown-trigger" href="#!" data-target="directions">LES DIRECTIONS<i class="material-icons right">arrow_drop_down</i></a>
@@ -339,12 +339,16 @@ window.addEventListener('scroll', function() {
            // Fade in logo & bring in FAB
             fadeInLogo.classList.add('fadeIn');
             document.getElementById('navbar').style.minHeight= '80px';
+            document.querySelectorAll('#navbar ul li').forEach(liEl => liEl.classList.add('adaptHeight'));      
+            document.querySelectorAll('#navbar ul li a').forEach(liEl => liEl.classList.add('adaptHeight'));
     } else {
          navigation.classList.remove('sticky');
          document.body.style.paddingTop = 0;
             // Fade out logo & remove FAB
             fadeInLogo.classList.remove('fadeIn');
-            document.getElementById('navbar').style.minHeight= '64px';
+            document.getElementById('navbar').style.minHeight= '64px'; //style.minHeight= '64px';
+            document.querySelectorAll('#navbar ul li:first-child').forEach(liEl => liEl.classList.remove('adaptHeight'));      
+            document.querySelectorAll('#navbar ul li a:first-child').forEach(liEl => liEl.classList.remove('adaptHeight'));
     }
  
   
@@ -354,7 +358,7 @@ window.addEventListener('scroll', function() {
     var sidenavs = document.querySelectorAll('.sidenav');
     var mobileNav = M.Sidenav.init(sidenavs, {edge:'right'});
     var dropdownItems = document.querySelectorAll('.dropdown-trigger');
-    var dropdownInstance = M.Dropdown.init(dropdownItems, {alignment:'left'});
+    var dropdownInstance = M.Dropdown.init(dropdownItems, {alignment:'center', coverTrigger: false,constrainWidth:false});
     var collapsibleItems = document.querySelectorAll('.collapsible');
     var collapser = M.Collapsible.init(collapsibleItems, {accordion: true});
     var tabs = document.querySelector('.tabs');
