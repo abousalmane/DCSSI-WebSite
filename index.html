@@ -24,9 +24,9 @@
     </div>
   
   
- <nav id="navbar"  style="min-height: 80px">
+ <nav id="navbar" >
    <div class="nav-wrapper  blue darken-3">
-     <a href="#!" class="brand-logo" style="padding:0!important;"><img src="logo.png" alt="" style=" height: 80px;"></a>
+     <a href="#!" class="brand-logo  animated slideInUp" style="padding:0!important;"><img src="logo.png" class="fadeOut" alt="" ></a>
      <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
      <ul class="right hide-on-med-and-down">
        <li class="active"><a href="#!"><i class="material-icons left">home</i> LA DCSSI</a></li>
@@ -77,9 +77,20 @@
       <!-- SidBar Mobile Menu -->
       <ul id="slide-out"   class="sidenav blue darken-3" >
         <li> 
+
+          <li class="sidenav-header blue lighten-2">
+            <div class="row">
+                  <a class="btn-flat waves-effect waves-light white-text center-align" href="index.html"><i class="material-icons left">home</i>LA DCSSI</a>
+                 
+            </div>
+          </li>
+          
+
+
+
           <ul class="collapsible collapsible-accordion"  data-collapsible = "accordion">
             <li>
-              <a class="collapsible-header white-text">LA DCSSI<i class="material-icons">arrow_drop_down</i></a>
+              <a class="collapsible-header white-text">LES DIRECTIONS<i class="material-icons">arrow_drop_down</i></a>
               <div class="collapsible-body blue darken-2">
                 <ul>
                   <li ><a href="#!" class="white-text">La D.S.I.S.</a></li>
@@ -305,18 +316,27 @@ function showMore(link, hidden){
     //shows the #more
     document.getElementById(hidden).style.display = "block";
 }
+     
 
 window.addEventListener('scroll', function() {
   let scrollTopY = window.pageYOffset || document.body.scrollTop;
   let navigation = document.querySelector('nav');
+  let fadeInLogo = document.querySelector('.fadeOut');
     if(scrollTopY > 220) {
-      document.body.style.paddingTop = navigation.offsetHeight + 'px';//Eliminate Jump effect  whennavbar is fixed
+      document.body.style.paddingTop = '90px';//Eliminate Jump effect  whennavbar is fixed
           navigation.classList.add('sticky');
-     
+           // Fade in logo & bring in FAB
+            fadeInLogo.classList.add('fadeIn');
+            document.getElementById('navbar').style.minHeight= '80px';
     } else {
          navigation.classList.remove('sticky');
          document.body.style.paddingTop = 0;
+            // Fade out logo & remove FAB
+            fadeInLogo.classList.remove('fadeIn');
+            document.getElementById('navbar').style.minHeight= '64px';
     }
+ 
+  
 });
 
       document.addEventListener('DOMContentLoaded', function() {
