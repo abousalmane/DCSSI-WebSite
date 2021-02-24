@@ -63,3 +63,12 @@ color:#00796b ;
   #level1 ul li.indicator{
 background-color: #4db6ac; /*teal lighten-2*/
   }  
+  #modal1 ul,  #modal1 li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #modal1 ul a{
+    margin: 0.5em ;
+    color: #FFF;
+  }

@@ -39,8 +39,6 @@
               <li><a href="#!">La Direction de l'Administration, des Affaires juridiques et des Relations extérieures</a></li>
               <li class="divider"></li>
               <li><a href="#!">le Centre national opérationel de cybersécurité</a></li>
-              <li><a href="#!">NOS PARTENAIRES</a></li>
-              <li class="divider"></li>
             </ul>
       </li>
        <li><a href="#!">CYBERSECURITE</a></li>
@@ -70,7 +68,21 @@
         </li>   
       </ul>
       </li>
-      <li><a href="#sheet1"><i class="material-icons">more_vert</i></a></li>
+      <li> <!-- Modal Trigger -->
+        <a class="waves-effect waves-light modal-trigger"  href="#modal1"><i class="material-icons">more_vert</i></a>
+                  <!-- Modal Structure -->
+            <div id="modal1" class="modal blue" style="max-width: 250px ;">
+              <div class="modal-content">
+                <h6>Ressources </h6>
+               <ul>
+                <li><a class="waves-effect waves-light btn "  href="#!"><i class="material-icons right">vpn_key</i>PKI</a></li>
+                <li> <a class="waves-effect waves-light btn"  href="#!"><i class="material-icons right">lock</i>Chiffrement</a></li>
+                <li> <a class="waves-effect waves-light btn"  href="#!"><i class="material-icons right">phone</i>CONTACT</a></li>
+               <li><a class="waves-effect waves-light btn"  href="#!"><i class="material-icons right">camera_alt</i> GALERIES</a></li>
+              </ul>
+              </div>
+            </div>
+      </li>
      </ul>
    </div>
  </nav> <!-- End Nav-->
@@ -309,12 +321,12 @@
       
       <script>
       
-function showMore(link, hidden){
+function showMore(linkId, hiddenId){
   //removes the link
-  let linkEl=document.getElementById(link);
+  let linkEl=document.getElementById(linkId);
   linkEl.parentElement.removeChild(linkEl);
     //shows the #more
-    document.getElementById(hidden).style.display = "block";
+    document.getElementById(hiddenId).style.display = "block";
 }
      
 
@@ -322,8 +334,9 @@ window.addEventListener('scroll', function() {
   let scrollTopY = window.pageYOffset || document.body.scrollTop;
   let navigation = document.querySelector('nav');
   let fadeInLogo = document.querySelector('.fadeOut');
-    if(scrollTopY > 220) {
-      document.body.style.paddingTop = '90px';//Eliminate Jump effect  whennavbar is fixed
+  let banner=document.querySelector('.header');
+    if(scrollTopY > banner.offsetHeight) {
+      document.body.style.paddingTop = '85px';//Eliminate Jump effect  whennavbar is fixed
           navigation.classList.add('sticky');
            // Fade in logo & bring in FAB
             fadeInLogo.classList.add('fadeIn');
@@ -352,8 +365,13 @@ window.addEventListener('scroll', function() {
     var carouselsObj = M.Carousel.init(carousels, {
             fullWidth: true,
             indicators: true });
+    var modals = document.querySelectorAll('.modal');
+    var modalsInstances = M.Modal.init(modals);
+  });
  
-      });      
+    
+ 
+  
       </script>
       
 </body>
