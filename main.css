@@ -73,5 +73,10 @@ background-color: #4db6ac; /*teal lighten-2*/
     color: #FFF;
   }
   .adaptHeight{
-    line-height: 80px;
+    line-height: 80px!important;
+  }
+  .content{
+   margin: 20px auto 10px auto ;
+   border: 1px cadetblue;
+   border-radius: 30px;
   }

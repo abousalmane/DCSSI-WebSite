@@ -28,7 +28,7 @@
    <div class="nav-wrapper blue darken-3">
      <a href="#!" class="brand-logo  animated slideInUp" style="padding:0!important;"><img src="logo.png" class="fadeOut" alt="" ></a>
      <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
-     <ul class="hide-on-med-and-down container ">
+     <ul class="hide-on-med-and-down container">
        <li class="active"><a href="#!"><i class="material-icons left">home</i> LA DCSSI</a></li>
        <!-- Dropdown Trigger -->
        <li><a class="dropdown-trigger" href="#!" data-target="directions">LES DIRECTIONS<i class="material-icons right">arrow_drop_down</i></a>
@@ -58,7 +58,7 @@
        <li><a href="#!">ALERTE</a></li>
        <li><ul id="nav-mobile" >
            <li>
-             <form style="height:64px;">
+             <form >
                <div class="input-field ">
                 <input id="search" type="search" class="blue darken-2" required placeholder="Rechercher">
                 <label class="label-icon" for="search"><i class="this material-icons">search</i></label>
@@ -131,7 +131,7 @@
         </li>
      </ul>
   </header>
-     <main class="content">
+  <main class="content container z-depth-5">
 <div id="level1" class="row">
   <section class="section col m12 l8">
     <div class="row">
@@ -339,7 +339,8 @@ window.addEventListener('scroll', function() {
            // Fade in logo & bring in FAB
             fadeInLogo.classList.add('fadeIn');
             document.getElementById('navbar').style.minHeight= '80px';
-            document.querySelectorAll('#navbar ul li').forEach(liEl => liEl.classList.add('adaptHeight'));      
+          //  document.getElementById('navbar').classList.add('navbar-fixed');
+            document.querySelectorAll('#navbar ul li, #navbar ul li i').forEach(liEl => liEl.classList.add('adaptHeight'));      
     /*         document.querySelectorAll('#navbar ul li a').forEach(liEl => liEl.classList.add('adaptHeight')); */
     } else {
          navigation.classList.remove('sticky');
@@ -347,7 +348,8 @@ window.addEventListener('scroll', function() {
             // Fade out logo & remove FAB
             fadeInLogo.classList.remove('fadeIn');
             document.getElementById('navbar').style.minHeight= '64px'; //style.minHeight= '64px';
-            document.querySelectorAll('#navbar ul li').forEach(liEl => liEl.classList.remove('adaptHeight'));      
+         //   document.getElementById('navbar').classList.remove('navbar-fixed');
+            document.querySelectorAll('#navbar ul li, #navbar ul li i ').forEach(liEl => liEl.classList.remove('adaptHeight'));      
       /*       document.querySelectorAll('#navbar ul li a:first-child').forEach(liEl => liEl.classList.remove('adaptHeight')); */
     }
  
