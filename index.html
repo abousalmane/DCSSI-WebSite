@@ -131,7 +131,7 @@
   </header>
   <main class="content container z-depth-5">
 <div id="level1" class="row">
-  <section class="section col m12 l8">
+  <section class="col m12 l8">
     <div class="row">
       <div class="col s12 ">
         <ul class="tabs" style="z-index: 1;">
@@ -164,15 +164,9 @@
           <a href="javascript:showMore('link3','more-3')" id="link3">Afficher tout >></a></p></div>
             <div id="more-3" style="display: none;">Tium ea ullam reiciendis molestiae, laudantium enim sed autem. Quae na Lorem ipsum dolor sit amet.</div>
        </div>
-          
 </section>
 <aside class="col m12 l4">
  <h3 class="center-align">Dernières Actualités</h3>
-      <!--div class="card-panel teal">
-        <span class="white-text">Lorem ipsum dolor sis, eos temporibus arum molestias sit? Modi nostrum iure nemo?
-      umenda, saepe laudantium sit nesciunt at aut alias architecto, id consequatur quidem! Placeat, voluptatem fuga error cum quia illo.
-        </span>
-      </div-->
       
   <div class="carousel carousel-slider center">
     <div class="carousel-fixed-item center">
@@ -353,7 +347,18 @@ window.addEventListener('scroll', function() {
  
   
 });
-
+let myIndex=0;
+function carouselAuto() {
+    var i;
+    var x = document.getElementsByClassName("carousel-item");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carouselAuto, 5000); // Change image every 2 seconds
+}
       document.addEventListener('DOMContentLoaded', function() {
     var sidenavs = document.querySelectorAll('.sidenav');
     var mobileNav = M.Sidenav.init(sidenavs, {edge:'right'});
@@ -366,7 +371,14 @@ window.addEventListener('scroll', function() {
     var carousels = document.querySelectorAll('.carousel');
     var carouselsObj = M.Carousel.init(carousels, {
             fullWidth: true,
-            indicators: true });
+            indicators: true,
+           });
+           let timesRun = 0;
+          let interval=  setInterval(()=>{
+              timesRun += 1;
+            if(timesRun === 4){ clearInterval(interval);  }
+            M.Carousel.getInstance(carousels[0]).next();
+                      },5000);
     var modals = document.querySelectorAll('.modal');
     var modalsInstances = M.Modal.init(modals);
   });
