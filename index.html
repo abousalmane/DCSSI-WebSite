@@ -28,7 +28,7 @@
    <div class="nav-wrapper blue darken-3">
      <a href="#!" class="brand-logo  animated slideInUp" style="padding:0!important;"><img src="logo.png" class="fadeOut" alt="" ></a>
      <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
-     <ul class="hide-on-med-and-down container">
+     <ul class="container hide-on-med-and-down">
        <li class="active"><a href="#!"><i class="material-icons left">home</i> LA DCSSI</a></li>
        <!-- Dropdown Trigger -->
        <li><a class="dropdown-trigger" href="#!" data-target="directions">LES DIRECTIONS<i class="material-icons right">arrow_drop_down</i></a>
@@ -129,15 +129,15 @@
         </li>
      </ul>
   </header>
-  <main class="content container z-depth-5">
+  <main class="content z-depth-5">
 <div id="level1" class="row">
-  <section class="col m12 l8">
+  <section class="container z-depth-5 col m12 l8">
     <div class="row">
-      <div class="col s12 ">
-        <ul class="tabs" style="z-index: 1;">
-          <li class="tab col s3"><a class="active" href="#presentation">Présentation</a></li>
-          <li class="tab col s3"><a  href="#mission">Mission</a></li>
-          <li class="tab col s3"><a href="#organisation">Organisation</a></li>
+      <div class="col s12">
+        <ul class="tabs" style="z-index: 1; margin-top: 20px;">
+          <li class="tab"><a class="active" href="#presentation">Présentation</a></li>
+          <li class="tab"><a  href="#mission">Mission</a></li>
+          <li class="tab"><a href="#organisation">Organisation</a></li>
         </ul>
       </div>
         <div id="presentation" class="col s12">
@@ -165,8 +165,8 @@
             <div id="more-3" style="display: none;">Tium ea ullam reiciendis molestiae, laudantium enim sed autem. Quae na Lorem ipsum dolor sit amet.</div>
        </div>
 </section>
-<aside class="col m12 l4">
- <h3 class="center-align">Dernières Actualités</h3>
+<aside class="container col m12 l4">
+ <h4 class="center-align">Dernières Actualités</h4>
       
   <div class="carousel carousel-slider center">
     <div class="carousel-fixed-item center">
@@ -279,7 +279,7 @@
   
   </main>
   <footer class="page-footer blue darken-4">
-    <div class="container ">
+    <div class=" ">
       <div class="row">
         <div class="col l6 s12" style="border-right: 2px solid #1687d7;">
           <h5 class="white-text">LA DCSSI</h5>
@@ -380,11 +380,10 @@ function carouselAuto() {
             M.Carousel.getInstance(carousels[0]).next();
                       },5000);
     var modals = document.querySelectorAll('.modal');
-    var modalsInstances = M.Modal.init(modals);
-  });
+    var modalsInstances = M.Modal.init(modals); 
  
     
- 
+          });
   
       </script>
       

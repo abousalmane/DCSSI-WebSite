@@ -71,5 +71,18 @@ background-color: #4db6ac; /*teal lighten-2*/
   }
   .content{
   padding-top: 16px;
-   border-radius: 30px;
+
+  }
+#level1 section{
+  max-width: 840px;
+  border-radius: 30px;
+}
+  .carousel {
+    height: 350px!important;
+    max-width: 300px;
+    margin: auto;
+  }
+  li.tab{
+    width: 33%;
+    margin: auto;
   }
