@@ -48,7 +48,7 @@ nav .input-field input[type=search]:focus {
   text-shadow: 0 0 0 rgba(0, 0, 0, 0.87); /* Remove blinking cursor 2/2*/
 }
 
-#level1 ul li a, #level1 h1,#level1 h2,#level1   h3, #level1  h4, #level1 h5 {
+#level1 ul li a, main h1,main  h3, main  h4, main h5 {
 color:#00796b ;
 }
 #level1 ul li a.active,#level1 ul li a:hover  {

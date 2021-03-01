@@ -29,7 +29,7 @@
      <a href="#!" class="brand-logo  animated slideInUp" style="padding:0!important;"><img src="logo.png" class="fadeOut" alt="" ></a>
      <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
      <ul class="container hide-on-med-and-down">
-       <li class="active"><a href="/"><i class="material-icons left">home</i> LA DCSSI</a></li>
+       <li class="active"><a href="/" class="tooltipped" data-position="left" data-tooltip="Accueil"><i class="material-icons left">home</i> LA DCSSI</a></li>
        <!-- Dropdown Trigger -->
        <li><a class="dropdown-trigger" href="#!" data-target="directions">LES DIRECTIONS<i class="material-icons right">arrow_drop_down</i></a>
                       <!-- Directions Dropdown Structure -->
@@ -41,7 +41,7 @@
               <li><a href="#!">le Centre national opérationel de cybersécurité</a></li>
             </ul>
       </li>
-       <li><a href="#!">CYBERSECURITE</a></li>
+       <li><a href="#!" class="tooltipped" data-position="bottom" data-tooltip="La cybersecurité au Sénégal">CYBERSECURITE</a></li>
        <!-- Dropdown Trigger -->
        <li><a class="dropdown-trigger" href="#!" data-target="formations">FORMATIONS<i class="material-icons right">arrow_drop_down</i></a>
                           <!-- Formations Dropdown Structure -->
@@ -55,10 +55,10 @@
             </ul>
       
       </li>
-       <li><a href="./alerte.html">ALERTE</a></li>
+       <li><a href="./alerte.html" class="tooltipped" data-position="bottom" data-tooltip="Alertes cybérsecurité">ALERTES</a></li>
     
       <li> <!--Ressources Modal Trigger -->
-        <a class="waves-effect waves-light modal-trigger"  href="#modal1"><i class="material-icons">more_vert</i></a>
+        <a class="waves-effect waves-light modal-trigger tooltipped" data-position="bottom" data-tooltip="Les ressources de la DCSSI" href="#modal1"><i class="material-icons">more_vert</i></a>
       </li>
      </ul>  <!-- End Ul Link Container -->
     
@@ -91,7 +91,8 @@
 
           <li class="sidenav-header blue lighten-2">
             <div class="row">
-                  <a class="btn-flat waves-effect waves-light white-text center-align" href="index.html"><i class="material-icons left">home</i>LA DCSSI</a>
+                  <a class="btn-flat waves-effect waves-light white-text center-align tooltipped" data-position="left" data-tooltip="Accueil" href="index.html">
+                    <i class="material-icons left">home</i>LA DCSSI</a>
                  
             </div>
           </li>
@@ -111,7 +112,7 @@
           </ul>
         </li>
         <li><a href="#modal1" class="white-text sidenav-close  modal-trigger">RESSOURCES</a></li>
-        <li><a href="./alerte.html" class="white-text">ALERTES</a></li>
+        <li><a href="./alerte.html" class="white-text tooltipped" data-position="left" data-tooltip="Alertes cybérsecurité" >ALERTES</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion"  data-collapsible = "accordion">
             <li>
@@ -135,9 +136,9 @@
     <div class="row">
       <div class="col s12" style="width: 100%;">
         <ul class="tabs" style="z-index: 1; margin-top: 20px;">
-          <li class="tab"><a class="active" href="#presentation">Présentation</a></li>
-          <li class="tab"><a  href="#mission">Mission</a></li>
-          <li class="tab"><a href="#organisation">Organisation</a></li>
+          <li class="tab"><a class="active tooltipped" href="#presentation" data-position="bottom" data-tooltip="Présentation de la DCSSI">Présentation</a></li>
+          <li class="tab"><a  href="#mission" class="tooltipped" data-position="bottom" data-tooltip="Missions et Attributions de la DCSSI">Mission</a></li>
+          <li class="tab"><a href="#organisation"  class="tooltipped" data-position="bottom" data-tooltip="Organisation de la DCSSI">Organisation</a></li>
         </ul>
       </div>
         <div id="presentation" class="col s12">
@@ -290,8 +291,8 @@
           <ul >
             <li><a href="#"  class="grey-text text-lighten-4">Missions</a> </li>
             <li><a href="#"  class="grey-text text-lighten-4">Les Directions</a></li>
-            <li><a href="./alerte.html"  class="grey-text text-lighten-4">Alertes</a></li>
-            <li><a href="#contactArea" onclick="M.TapTarget.getInstance(document.querySelector('.tap-target')).open()" class="grey-text text-lighten-4">Contact</a></li>
+            <li><a href="./alerte.html"  class="grey-text text-lighten-4 tooltipped" data-position="right" data-tooltip="Alertes cybérsecurité">Alertes</a></li>
+            <li><a href="#contactArea" onclick="M.TapTarget.getInstance(document.querySelector('.tap-target')).open()" class="grey-text text-lighten-4 tooltipped" data-position="right" data-tooltip="Contact DCSSI">Contact</a></li>
           </ul>
         </div>
         <div class="col l4 offset-l2 s12">
@@ -307,7 +308,7 @@
         <!-- Element Showed -->
     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
       <!--a id="phoneDiscover" class="btn btn-floating btn-large cyan"><i class="material-icons">phone</i></a-->
-      <a id="contactArea" class="waves-effect waves-light btn btn-floating hide-on-med-and-down " ><i class="material-icons">phone</i></a>
+      <a id="contactArea" class="waves-effect waves-light btn btn-floating hide-on-med-and-down tooltipped " data-position="left" data-tooltip="Contact DCSSI"><i class="material-icons">phone</i></a>
    </div> 
        <!-- Tap Target Structure -->
        <div class="tap-target teal" data-target="contactArea">
@@ -388,6 +389,8 @@ function carouselAuto() {
     var dropdownInstance = M.Dropdown.init(dropdownItems, {alignment:'center', coverTrigger: false,constrainWidth:false});
     var collapsibleItems = document.querySelectorAll('.collapsible');
     var collapser = M.Collapsible.init(collapsibleItems, {accordion: true});
+    var tooltips = document.querySelectorAll('.tooltipped');
+    var tooltipsInstances = M.Tooltip.init(tooltips);
     var tabs = document.querySelector('.tabs');
     var tabInstance = M.Tabs.init(tabs); 
     var carousels = document.querySelectorAll('.carousel');
