@@ -55,7 +55,7 @@
             </ul>
       
       </li>
-       <li><a href="./alerte.html">ALERTE<span class="badge red accent-2 white-text" style="border-radius: 100%;">3</span></a></li>
+       <li><a href="./alerte.html">ALERTE</a></li>
     
       <li> <!--Ressources Modal Trigger -->
         <a class="waves-effect waves-light modal-trigger"  href="#modal1"><i class="material-icons">more_vert</i></a>
@@ -129,7 +129,7 @@
         </li>
      </ul>
   </header>
-  <main class="container content z-depth-5">
+  <main class="container content z-depth-5 flow-text">
 <div id="level1" class="flex section">
   <section class="z-depth-5">
     <div class="row">
@@ -193,7 +193,7 @@
       <p class="white-text">Instruction présidentielle relative à la politique de sécurité des systèmes d’informations de l’Etat du Sénégal</p>
     </div>
   </div> <!--End carousel div wrapper-->
-     
+
 </aside>
 </div>
 <div class="divider"></div>
@@ -280,8 +280,7 @@
 </div>
   
   </article>  
-  
-  
+          
   </main>
   <footer class="page-footer blue darken-4">
     <div class=" ">
@@ -292,7 +291,7 @@
             <li><a href="#"  class="grey-text text-lighten-4">Missions</a> </li>
             <li><a href="#"  class="grey-text text-lighten-4">Les Directions</a></li>
             <li><a href="./alerte.html"  class="grey-text text-lighten-4">Alertes</a></li>
-            <li><a href="#"  class="grey-text text-lighten-4">Contact</a></li>
+            <li><a href="#contactArea" onclick="M.TapTarget.getInstance(document.querySelector('.tap-target')).open()" class="grey-text text-lighten-4">Contact</a></li>
           </ul>
         </div>
         <div class="col l4 offset-l2 s12">
@@ -305,6 +304,24 @@
           </ul>
         </div>
       </div>
+        <!-- Element Showed -->
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+      <!--a id="phoneDiscover" class="btn btn-floating btn-large cyan"><i class="material-icons">phone</i></a-->
+      <a id="contactArea" class="waves-effect waves-light btn btn-floating hide-on-med-and-down " ><i class="material-icons">phone</i></a>
+   </div> 
+       <!-- Tap Target Structure -->
+       <div class="tap-target teal" data-target="contactArea">
+         <div class="tap-target-content white-text">
+           <h3 class="center-align">CONTACT:</h3>
+         <p>  <ul>
+          <li>Téléphone : (+221) 33 880 83 47</li>
+          <li>Télécopie : (+221) 33 823 28 40</li>
+          <li>Courrier : DCSSI / Secrétariat Général de la Présidence de la République BP 4026 Dakar (Sénégal)</li>
+          <li>Email : stccam@stcc-ssi.sn</li>
+        </ul></p>
+         </div>
+       </div>
+  
     </div>
     <div class="footer-copyright">
       <div class="container">
@@ -386,7 +403,11 @@ function carouselAuto() {
                       },5000);
     var modals = document.querySelectorAll('.modal');
     var modalsInstances = M.Modal.init(modals); 
- 
+    var discoverElem = document.querySelector('.tap-target');
+    var discoverInstances = M.TapTarget.init(discoverElem);
+    document.getElementById('contactArea').addEventListener('click', ()=>{
+        discoverInstances.open();
+    });
     
           });
   
