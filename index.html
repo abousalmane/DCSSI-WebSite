@@ -15,8 +15,9 @@
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        
-    <link rel="stylesheet" href="main.css">
-</head>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link rel="stylesheet" href="main.css">
+  </head>
 <body>
   <header>
     <div class="header" >
@@ -138,7 +139,7 @@
           <li class="tab"><a href="#organisation"  class="tooltipped" data-position="bottom" data-tooltip="Organisation de la DCSSI">Organisation</a></li>
         </ul>
       </div>
-        <div id="presentation" class="col s12">
+        <div id="presentation" class="col s12"  data-aos="fade-up">
           <h3>Présentation de la DCSSI</h3>
           <p>Depuis 1962, le Sénégal dispose d’un Service Technique Central des Chiffres. Créé par décret n° 62 020, il était  mis à la disposition du Président du Conseil
              et seul habilité à connaître de tous les problèmes d’ordre technique concernant l’utilisation du Chiffre par le Gouvernement pour l’échange de ses communications intérieures et extérieures .
@@ -202,7 +203,7 @@
 <div class="row">
   <!--Card 1-->
   <div class="col s12 m6 l4">
-    <div class="card teal darken-2darken-1">
+    <div class="card teal darken-2darken-1"  >
       <div class="card-content white-text">
         <span class="card-title">March 1-5, 2021</span>
         <p>Financial Cryptography and Data Security 2021 (FC21), Grand Anse, Grenada</p>
@@ -214,7 +215,7 @@
   </div>
 <!--Card 2-->
   <div class="col s12 m6 l4">
-    <div class="card teal darken-2darken-1">
+    <div class="card teal darken-2darken-1" >
       <div class="card-content white-text">
         <span class="card-title">2-6 May 2021</span>
         <p>EuroCrypt 2021, Zagreb, Croatia..</p>
@@ -241,7 +242,7 @@
   <div class="row">
      <!--Card 1-->
   <div class="col s12 m6 l4">
-    <div class="card teal darken-2darken-1">
+    <div class="card teal darken-2darken-1" data-aos="fade-up-right">
       <div class="card-content white-text">
         <span class="card-title">March 1-5, 2021</span>
         <p>Financial Cryptography and Data Security 2021 (FC21), Grand Anse, Grenada</p>
@@ -253,7 +254,7 @@
   </div>
 <!--Card 2-->
   <div class="col s12 m6 l4">
-    <div class="card teal darken-2darken-1">
+    <div class="card teal darken-2darken-1" data-aos="slide-up">
       <div class="card-content white-text">
         <span class="card-title">2-6 May 2021</span>
         <p>EuroCrypt 2021, Zagreb, Croatia.. Lorem, ipsum dolor.</p>
@@ -265,7 +266,7 @@
     </div>
     <!--Card 3-->
     <div class="col s12 m6 l4">
-      <div class="card teal darken-2darken-1">
+      <div class="card teal darken-2darken-1" data-aos="fade-up-right">
         <div class="card-content white-text">
           <span class="card-title">June 14-17</span>
           <p>Number-Theoretic Methods in Cryptology (NuTMiC), 2021, Pozna?, Poland</p>
@@ -283,7 +284,7 @@
   <footer class="page-footer blue darken-4">
     <div class=" ">
       <div class="row">
-        <div class="col l6 s12" style="border-right: 2px solid #1687d7;">
+        <div class="col l6 s12" style="border-right: 2px solid #1687d7;" data-aos="fade-right">
           <h5 class="white-text">LA DCSSI</h5>
           <ul >
             <li><a href="#"  class="grey-text text-lighten-4">Missions</a> </li>
@@ -292,7 +293,7 @@
             <li><a href="#contactArea" onclick="M.TapTarget.getInstance(document.querySelector('.tap-target')).open()" class="grey-text text-lighten-4 tooltipped" data-position="right" data-tooltip="Contact DCSSI">Contact</a></li>
           </ul>
         </div>
-        <div class="col l4 offset-l2 s12">
+        <div class="col l4 offset-l2 s12" data-aos="fade-left">
           <h5 class="white-text">Liens utils</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
@@ -321,16 +322,16 @@
        </div>
   
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright"  data-aos="fade-up"data-aos-anchor-placement="bottom-bottom">
       <div class="container">
     <p class="left">  © Copyright 2020 AbouSalmane@DCSSI </p>
       <a class="grey-text text-lighten-4 " href="#!"><img src="logo.png" width="100px" alt="" style="display: block; margin: auto;"></a>
       </div>
     </div>
   </footer>
-      
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>  
       <script>
-      
+      AOS.init();
 function showMore(linkId, hiddenId){
   //removes the link
   let linkEl=document.getElementById(linkId);

@@ -84,11 +84,11 @@ background-color: #4db6ac; /*teal lighten-2*/
   border-radius: 30px;
 }
 #level1 p, article p, h1, h2, h3, h4  {
-  padding-left: 16px;
+  padding-left: 14px;
 }
-#level1 aside{
+/*#level1 aside{
 
-}
+}*/
   .carousel {
     height: 350px!important;
     width:300px;
@@ -98,3 +98,4 @@ background-color: #4db6ac; /*teal lighten-2*/
     width: 30%;
     margin: auto;
   }
+ 
