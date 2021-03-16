@@ -91,6 +91,7 @@ max-height: 50vh;
 overflow-y: auto;
 }
 #presentation figure figcaption{
+  margin-left: 5px;
   font-size: small; 
   text-align: left;
 }
