@@ -17,6 +17,13 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        
     <link rel="stylesheet" href="main.css">
+    <style>
+      article{
+        margin: .5rem;
+        border-radius: 10px;
+        background-color: #fafafa;
+      }
+    </style>
 </head>
 <body>
   <header>
@@ -131,13 +138,14 @@
      </ul>
   </header>
   <main class="container content z-depth-5">
+    <header style="padding: 2rem;">
+      <h3>Alerte cybersécurité</h3>
+      <p>Les dernières menaces liées à la cybersécurité </p>
+    </header>
 
-<article  style="position: relative">
-<h3>Alerte cybersécurité</h3>
-<p>Evénements en cryptologie avec the International Association for Cryptologic Research (IACR)</p>
 <div class="row">
-  <!--Card 1-->
-  <div id="presentation" class="col s12"  data-aos="fade-up">
+  <!--Article 1-->
+  <article  class="col s12 section hoverable z-depth-1"  data-aos="fade-up">
     <h3>Nouvelle vague d’attaque virale de type « ransomware » à l’aide du virus Locky</h3>
     <p>Alerte sécurité : Nouvelle vague d’attaque virale de type « ransomware » à l’aide du virus Locky L’écran que l’on 
       obtient généralement à la fin de l’infection, quand le virus a terminé de chiffrer tous vos fichiers Un nouveau virus 
@@ -165,9 +173,9 @@
        pour vous rendre compte que votre sauvegarde était en panne depuis six mois. Testez la régulièrement.</p>
 <h6>N’activez pas les macros du pack Office trop facilement !</h6>
     </div>
-  </div>
-<!--Card 2-->
-<div id="presentation" class="col s12"  data-aos="fade-up">
+  </article>
+<!--Article 2-->
+<article class="col s12 section hoverable z-depth-1"  data-aos="fade-up">
   <h3>Une attaque informatique hors norme qui a paralysé de nombreux sites Internet vient de s’achever.</h3>
   <p>Une attaque informatique hors norme qui a paralysé de nombreux sites Internet vient de s’achever.
      Et ce sont des caméras de surveillance ou des téléviseurs connectés qui ont été utilisés pour la réussir. Décryptage.
@@ -180,7 +188,7 @@
        Dyn qui traduisent sa demande en adresse IP, le langage que comprennent tous les ordinateurs de la planète Internet.</p>
     <p> En tant qu’organe principal de la sécurité des communications, le STCC-SSI a pour mission principale d’ assurer en toute circonstance, la protection des informations de caractère secret empruntant les voies de transmission indiscrètes.</p>            
   </div>
-</div>
+</article>
 
 </div>
 <h4>2020</h4>
@@ -222,8 +230,7 @@
       </div>
     </div>
 </div>
-  
-  </article>  
+
   
   
   </main>
